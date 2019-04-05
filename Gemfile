@@ -21,6 +21,8 @@ gem 'coffee-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'action-pack'
+gem 'railties'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '~> 4.0.3'
 
@@ -35,10 +37,21 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :test do
-  gem 'rspec-rails', '~> 3.7'
+group :test, :development do
+  gem "rspec-rails"
+  gem "capybara"
+  gem "selenium-webdriver"
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "factory_bot"
+  gem "simplecov"
+  gem "database_cleaner"
+  gem "sqlite3"
+  gem "pry"
+  gem "guard-rspec", require: false
+  gem "thin"
 end
-
+gem "bootstrap-sass"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
